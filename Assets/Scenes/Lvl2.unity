@@ -308,6 +308,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4429495963360492699, guid: afff0d062568f9f4998d30e382ddda29, type: 3}
   m_PrefabInstance: {fileID: 81809781}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &83421740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6848848906051982840, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+  m_PrefabInstance: {fileID: 8784340487683372606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &86089576
 GameObject:
   m_ObjectHideFlags: 0
@@ -79689,6 +79694,10 @@ PrefabInstance:
       propertyPath: maxSlingCooldownTimer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: maxSlingInvincibilityTimer
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8729480024169679619, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -80450,6 +80459,14 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 1661249976}
+    - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+      propertyPath: spriteHolder
+      value: 
+      objectReference: {fileID: 83421740}
+    - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+      propertyPath: maxInvincibilityTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6787259633476566611, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5

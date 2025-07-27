@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI hpText;
     public Animator specialAnimator;
     [SerializeField] Transform bodyRotator;
+    [SerializeField] Transform spriteHolder;
     public bool controlsEnabled;
     public bool cutscene;
     public bool tugging;
@@ -35,6 +36,9 @@ public class Player : MonoBehaviour
     float knockbackProg;
     bool knockback;
     bool dead;
+    [SerializeField] float maxInvincibilityTimer;
+    float invincibilityTimer;
+    bool flicker;
 
     private void Awake()
     {
@@ -65,6 +69,7 @@ public class Player : MonoBehaviour
     {
         ReadMovement();
         RotateBody();
+        RunInvincibilityTimer();
     }
 
     private void FixedUpdate()
@@ -176,7 +181,37 @@ public class Player : MonoBehaviour
  
         var dir = transform.position - e.sender.position;
         KnockBack(dir);
+        hp.isInvincible = true;
+        hp.invincibilityOnTimer = true;
         hpText.text = $"Health: {hp.currentHealth}/{hp.maxHealth}";
+    }
+
+    private void RunInvincibilityTimer()
+    {
+        if (hp.invincibilityOnTimer && !dead)
+        {
+            if (invincibilityTimer >= maxInvincibilityTimer)
+            {
+                hp.invincibilityOnTimer = false;
+                hp.isInvincible = false;
+                invincibilityTimer = 0f;
+                spriteHolder.transform.localScale = new Vector3(1, 1, 1);
+                return;
+            }
+            else
+            {
+                invincibilityTimer += Time.deltaTime;
+            }
+            flicker = !flicker;
+            if (flicker)
+            {
+                spriteHolder.transform.localScale = new Vector3(0, 0, 0);
+            }
+            else
+            {
+                spriteHolder.transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

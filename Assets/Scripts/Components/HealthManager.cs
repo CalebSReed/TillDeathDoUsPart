@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public bool isInvincible;
+    public bool invincibilityOnTimer;
     public bool slingInvinicibility;
 
     public EventHandler<DamageArgs> OnDamageTaken;
