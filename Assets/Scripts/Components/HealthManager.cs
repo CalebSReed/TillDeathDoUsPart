@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public bool isInvincible;
+    public bool slingInvinicibility;
 
     public EventHandler<DamageArgs> OnDamageTaken;
     public EventHandler OnDeath;
@@ -44,6 +45,11 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(int dmg, DamageArgs dmgArgs)
     {
+        if (dmgArgs.sender.CompareTag("Death") && slingInvinicibility)
+        {
+            return;
+        }
+
         if (!isInvincible && !cooldown)
         {
             currentHealth -= dmg;

@@ -90,9 +90,9 @@ public static class CalebUtils
 
         returnList = returnList.OrderBy(num => num.Item2).ToList();
 
-        int i = 0;
+        /*int i = 0;
 
-        /*foreach ((var transform, var dist) in returnList)
+        foreach ((var transform, var dist) in returnList)
         {
             Debug.Log($"{transform.parent} is {dist} away! at index: {i}");
             i++;

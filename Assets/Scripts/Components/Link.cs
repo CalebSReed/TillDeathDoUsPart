@@ -21,6 +21,8 @@ public class Link : MonoBehaviour
     [SerializeField] float slingLinearDamping;
     [SerializeField] float maxSlingCooldownTimer;//in seconds
     private float slingCooldownTimer;
+    [SerializeField] private float maxSlingInvincibilityTimer;
+    private float slingInvincibilityTimer;
     public bool slinging { get; private set; }
     public bool slingCooldown;
     float slingForce;
@@ -117,7 +119,8 @@ public class Link : MonoBehaviour
         force = force.normalized * slingForce * slingForceMult;
 
         rb.linearVelocity = force;
-        Debug.Log(force);
+
+        Player.Instance.hp.slingInvinicibility = true;
         Player.Instance.frontAnimator.SetBool("Throwing", true);
         Player.Instance.backAnimator.SetBool("Throwing", true);
         Player.Instance.leftAnimator.SetBool("Throwing", true);
@@ -137,6 +140,7 @@ public class Link : MonoBehaviour
         RunSlingCooldownTimer();
         BuildUpSlingForce();
         CloseInSlingDistance();
+        RunSlingInvincibilityTimer();
     }
 
     void FixedUpdate()
@@ -173,6 +177,22 @@ public class Link : MonoBehaviour
                 rb.AddForce(force);
                 hingeRb.AddForce(-force * 3);
                 //Debug.Log($"{force} is force, hinge: {hinge.transform.position}, and self: {transform.position}");
+            }
+        }
+    }
+
+    private void RunSlingInvincibilityTimer()
+    {
+        if (Player.Instance.hp.slingInvinicibility)
+        {
+            if (slingInvincibilityTimer >= maxSlingInvincibilityTimer)
+            {
+                Player.Instance.hp.slingInvinicibility = false;
+                slingInvincibilityTimer = 0;
+            }
+            else
+            {
+                slingInvincibilityTimer += Time.deltaTime;
             }
         }
     }

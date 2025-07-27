@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public float speedMult;
     [SerializeField] int maxHealth;
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] HealthManager hp;
+    public HealthManager hp;
     [SerializeField] TextMeshProUGUI hpText;
     public Animator specialAnimator;
     [SerializeField] Transform bodyRotator;
