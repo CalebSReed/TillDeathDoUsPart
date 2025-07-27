@@ -157,6 +157,7 @@ public class Player : MonoBehaviour
         if (hp.currentHealth <= 0)
         {
             dead = true;
+            playerInput.PlayerDefault.Disable();
             AudioManager.Instance.Play("Die", transform.position, gameObject, true, false, false);
             specialAnimator.Play("Die");
         }
