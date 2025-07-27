@@ -21,7 +21,7 @@ public class Link : MonoBehaviour
     [SerializeField] float slingLinearDamping;
     [SerializeField] float maxSlingCooldownTimer;//in seconds
     private float slingCooldownTimer;
-    bool slinging;
+    public bool slinging { get; private set; }
     public bool slingCooldown;
     float slingForce;
     float maxSlingForce = 1f;

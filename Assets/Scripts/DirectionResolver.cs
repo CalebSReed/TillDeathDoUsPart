@@ -36,7 +36,7 @@ public class DirectionResolver : MonoBehaviour
         // 315-44 is back, 45-134 is side 135-180 is front
         if (angle < 45 || angle >= 315)
         {
-            if (!upSwing)
+            if (!upSwing && Link.Instance.slinging)
             {
                 AudioManager.Instance.Play("Swing", transform.position, gameObject, true);
             }

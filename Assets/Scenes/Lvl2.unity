@@ -79685,6 +79685,10 @@ PrefabInstance:
       propertyPath: hinge
       value: 
       objectReference: {fileID: 1607281283}
+    - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: maxSlingCooldownTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8729480024169679619, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -80104,6 +80108,10 @@ PrefabInstance:
     - target: {fileID: 7231609098625915267, guid: 1406b0bbec35e79499ca175e28c55fc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809387179404292605, guid: 1406b0bbec35e79499ca175e28c55fc4, type: 3}
+      propertyPath: sounds.Array.data[11].volumeMult
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
