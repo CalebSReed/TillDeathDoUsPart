@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5640346300733521954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7231609098625915267}
+  - component: {fileID: 7809387179404292605}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7231609098625915267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640346300733521954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.727102, y: 22.65266, z: 3.951698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7809387179404292605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640346300733521954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedb98be89fe8d46be3d148f53ed2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Die
+    clip: {fileID: 8300000, guid: c7abfb5c15b9d6d4b91a6995feb81b54, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Close
+    clip: {fileID: 8300000, guid: 098068d58f7bf6443b2103fc4cbb39a8, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Hurt
+    clip: {fileID: 8300000, guid: 62ecde60b5d2a144d8d681cebb30a179, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Hit
+    clip: {fileID: 8300000, guid: 199c8e1fd27aae140b77229ce7f4b0a6, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Step
+    clip: {fileID: 8300000, guid: 776c92d83bdf41142a22f4a7499c37e3, type: 3}
+    soundType: 0
+    volumeMult: 0.5
+    loop: 0
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 28986274c725e824fbde1c90c7b5fb7e, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Open
+    clip: {fileID: 8300000, guid: 4ffdf3a7e8792cb44bf5743a34d5225d, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Text
+    clip: {fileID: 8300000, guid: 3167ce17193c9684b86e1a73a775dafa, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Heal
+    clip: {fileID: 8300000, guid: d92ffc19c3eac094f9a4b5ac07599d4d, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: EnemyStep
+    clip: {fileID: 8300000, guid: 2317a918ef017504e8c868e722d52ade, type: 3}
+    soundType: 0
+    volumeMult: 0.5
+    loop: 0
+  - name: Key
+    clip: {fileID: 8300000, guid: 7ea249b578368ee47a373e949a64a29d, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Swing
+    clip: {fileID: 8300000, guid: 5e62da6e6cd71cc46b852dc33e6969dc, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 0
+  - name: Launch
+    clip: {fileID: 8300000, guid: e5b8fde4a6cc95d41b211ff0265b08f3, type: 3}
+    soundType: 0
+    volumeMult: 0.5
+    loop: 0
+  - name: Level
+    clip: {fileID: 8300000, guid: f7c2c629203ce6f448b94598c9ecba92, type: 3}
+    soundType: 0
+    volumeMult: 0.5
+    loop: 1
+  - name: Intro
+    clip: {fileID: 8300000, guid: dd1307c61171c5c449374f840838c4a0, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 1
+  - name: Title
+    clip: {fileID: 8300000, guid: 09b0d18fd161c374991bac7fcf634164, type: 3}
+    soundType: 0
+    volumeMult: 1
+    loop: 1

@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: b406bb178d81fa64da8cf65b7279dd5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9179497755675596014
+    second: Rope_title-Sheet_0
+  - first:
+      213: 3317587716401388948
+    second: Rope_title-Sheet_1
+  - first:
+      213: -2821378488903288682
+    second: Rope_title-Sheet_2
+  - first:
+      213: -1900669073223946022
+    second: Rope_title-Sheet_3
+  - first:
+      213: -2391171601120892054
+    second: Rope_title-Sheet_4
+  - first:
+      213: 5136529852337357753
+    second: Rope_title-Sheet_5
+  - first:
+      213: 6945901892346558279
+    second: Rope_title-Sheet_6
+  - first:
+      213: 5689505402041941019
+    second: Rope_title-Sheet_7
+  - first:
+      213: 9065228540207200385
+    second: Rope_title-Sheet_8
+  - first:
+      213: 8556087272011469555
+    second: Rope_title-Sheet_9
+  - first:
+      213: -1805421573065544894
+    second: Rope_title-Sheet_10
+  - first:
+      213: -8451903953366085489
+    second: Rope_title-Sheet_11
+  - first:
+      213: 489837866049171281
+    second: Rope_title-Sheet_12
+  - first:
+      213: -8422490965026709866
+    second: Rope_title-Sheet_13
+  - first:
+      213: 1390084298125904720
+    second: Rope_title-Sheet_14
+  - first:
+      213: 5395391957699072033
+    second: Rope_title-Sheet_15
+  - first:
+      213: 5221695545412491577
+    second: Rope_title-Sheet_16
+  - first:
+      213: 154137500605648320
+    second: Rope_title-Sheet_17
+  - first:
+      213: 3197839172024750294
+    second: Rope_title-Sheet_18
+  - first:
+      213: 4792028169596256641
+    second: Rope_title-Sheet_19
+  - first:
+      213: 6870268853809193345
+    second: Rope_title-Sheet_20
+  - first:
+      213: 4881099114288736062
+    second: Rope_title-Sheet_21
+  - first:
+      213: 1467163152417317421
+    second: Rope_title-Sheet_22
+  - first:
+      213: -5682521421010511755
+    second: Rope_title-Sheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rope_title-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 232
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee41a8fd290246f70800000000000000
+      internalID: 9179497755675596014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rope_title-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 129
+        width: 232
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ddd4363707a0e20800000000000000
+      internalID: 3317587716401388948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rope_title-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 232
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698bdff663378d8d0800000000000000
+      internalID: -2821378488903288682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 62d32ee52ab31de468052b667c04a690
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rope_title-Sheet_0: 9179497755675596014
+      Rope_title-Sheet_1: 3317587716401388948
+      Rope_title-Sheet_2: -2821378488903288682
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

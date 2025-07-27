@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1666523763057223214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3836783197835907793}
+  - component: {fileID: 1257903776044779591}
+  - component: {fileID: 1645597508197624550}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3836783197835907793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666523763057223214}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.024185525, y: -0.26187113, z: 0.037154663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257903776044779591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666523763057223214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: aa96125d8bc091e47b5b2a09246e6586, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 909b9af2-2577-4039-a9df-11a9592b79d7
+    m_ActionName: 'PlayerDefault/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6381e1b6-f1e1-4db1-9d2f-3f7f3ae99abe
+    m_ActionName: 'PlayerDefault/ZoomCam[/Mouse/scroll/y]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ab7280be-9501-48cc-b06f-b29ebbc644dc
+    m_ActionName: 'PlayerDefault/MousePosition[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 25429cfa-7bf4-4986-bf9d-34afdabd86c8
+    m_ActionName: 'PlayerDefault/InteractButton[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a09766d-c227-4f8a-a1a9-d19f3f6e7bc9
+    m_ActionName: 'PlayerDefault/CancelButton[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf074d76-830c-46e4-b6b8-40d135d01853
+    m_ActionName: 'PlayerDefault/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c0149e1-aec3-4670-b16b-4f7574bd31ec
+    m_ActionName: 'PlayerDefault/Debug[/Keyboard/slash]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33f8eb0d-17cd-499f-97c7-78e28045cb44
+    m_ActionName: 'PlayerDefault/Return[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ecb57c2e-bc7a-43f3-b232-9403c23a65a1
+    m_ActionName: 'PlayerDefault/ToggleFollow[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Link, Assembly-CSharp
+        m_MethodName: OnSlingInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ff9f7f7d-d54f-4faa-ad17-f84b226eb98b
+    m_ActionName: 'PlayerDefault/Sling[/Mouse/leftButton,/Keyboard/z]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Link, Assembly-CSharp
+        m_MethodName: OnSlingInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 23b39441-a5e5-4dc5-9ed4-9dd43d51220d
+    m_ActionName: 'PlayerDefault/Select[/Keyboard/anyKey,/Mouse/leftButton]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerDefault
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1645597508197624550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666523763057223214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45bbdb60bfdf05b4a95c1fce1750ad3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyList:
+  - {fileID: 7944077475521631976, guid: afff0d062568f9f4998d30e382ddda29, type: 3}
+  - {fileID: 6748306857954617515, guid: a18ada38b1b27dd43ac9a0f8ce427d21, type: 3}
+  enemiesKilled: 0
+  killGoal: 25
+  dropKey: 0
+  keyAlreadyDropped: 0
+  keyObj: {fileID: 6191699430246742268, guid: cc44e88b2da58094caa827151305c3da, type: 3}
+  hpObj: {fileID: 2043040109681301616, guid: e36788605d4784f47b0e44cb5031ad3f, type: 3}
+  title: 0
+  start: {fileID: 0}
+  rope: {fileID: 0}
