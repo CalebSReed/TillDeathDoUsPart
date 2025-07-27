@@ -22768,7 +22768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: intro
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: keyUI

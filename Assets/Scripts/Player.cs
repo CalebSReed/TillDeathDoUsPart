@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     Vector3 knockbackDir;
     float knockbackProg;
     bool knockback;
+    bool dead;
 
     private void Awake()
     {
@@ -148,8 +149,14 @@ public class Player : MonoBehaviour
 
     private void OnDamaged(object sender, DamageArgs e)
     {
+        if (dead)
+        {
+            return;
+        }
+
         if (hp.currentHealth <= 0)
         {
+            dead = true;
             AudioManager.Instance.Play("Die", transform.position, gameObject, true, false, false);
             specialAnimator.Play("Die");
         }
