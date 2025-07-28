@@ -39,6 +39,7 @@ public class Link : MonoBehaviour
     void Start()
     {
         hingeRb = hinge.GetComponent<Rigidbody2D>();
+        rb.linearDamping = defaultLinearDamping;
     }
 
     public void OnSlingInput(InputAction.CallbackContext context)
@@ -179,7 +180,7 @@ public class Link : MonoBehaviour
             {
                 var force = (hinge.transform.position - transform.position) * distance;
                 rb.AddForce(force);
-                hingeRb.AddForce(-force * 3);
+                hingeRb.AddForce(-force * 2);
                 //Debug.Log($"{force} is force, hinge: {hinge.transform.position}, and self: {transform.position}");
             }
         }

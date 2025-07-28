@@ -308,11 +308,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4429495963360492699, guid: afff0d062568f9f4998d30e382ddda29, type: 3}
   m_PrefabInstance: {fileID: 81809781}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &83421740 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6848848906051982840, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
-  m_PrefabInstance: {fileID: 8784340487683372606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &86089576
 GameObject:
   m_ObjectHideFlags: 0
@@ -79696,6 +79691,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 279575672746975684, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770707006638927095, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046930544130989999, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3735855733593730983, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
@@ -79704,25 +79711,25 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1607281283}
+    - target: {fileID: 6870946605645802156, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: hinge
       value: 
       objectReference: {fileID: 1607281283}
-    - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
-      propertyPath: maxSlingCooldownTimer
-      value: 1
+    - target: {fileID: 8728460853387383808, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_Size.y
+      value: 0.71619153
       objectReference: {fileID: 0}
-    - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
-      propertyPath: slingForceBuildupMult
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626851375890769700, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
-      propertyPath: maxSlingInvincibilityTimer
-      value: 0.25
+    - target: {fileID: 8728460853387383808, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23855644
       objectReference: {fileID: 0}
     - target: {fileID: 8729480024169679619, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8729480024169679619, guid: 92768ff9567f8bc4bbf6ff59740b8e96, type: 3}
       propertyPath: m_LocalPosition.y
@@ -80517,17 +80524,9 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 1661249976}
-    - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
-      propertyPath: spriteHolder
-      value: 
-      objectReference: {fileID: 83421740}
-    - target: {fileID: 363965637470486866, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
-      propertyPath: maxInvincibilityTimer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6787259633476566611, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6787259633476566611, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -80565,6 +80564,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7699983282148911150, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+      propertyPath: stepVFX
+      value: 
+      objectReference: {fileID: 8311089806360806983, guid: b8ba0ddd2e7b0b849966d70d59bafc91, type: 3}
     - target: {fileID: 8587556614210849384, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -80582,6 +80585,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2022581071955423498, guid: cb1b176f48fe6fd48aa1daf10529a6c0, type: 3}
+      propertyPath: orthographic size
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2949369127066524490, guid: cb1b176f48fe6fd48aa1daf10529a6c0, type: 3}
       propertyPath: death
       value: 

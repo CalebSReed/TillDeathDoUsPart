@@ -165,19 +165,13 @@ public class Player : MonoBehaviour
             dead = true;
             playerInput.PlayerDefault.Disable();
             AudioManager.Instance.Play("Die", transform.position, gameObject, true, false, false);
+            AudioManager.Instance.Stop("Level");
             specialAnimator.Play("Die");
         }
         else
         {
             AudioManager.Instance.Play("Hurt", transform.position, gameObject, true, false, false);
-            if (e.sender.CompareTag("Death"))
-            {
-                specialAnimator.Play("Dodge");
-            }
-            else
-            {
-                specialAnimator.Play("PlayerDamaged");
-            }
+            specialAnimator.Play("PlayerDamaged");
         }
  
         var dir = transform.position - e.sender.position;

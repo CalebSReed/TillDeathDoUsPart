@@ -817,7 +817,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 2
+  m_LinearDamping: 4
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -853,9 +853,9 @@ MonoBehaviour:
   forceMult: 2
   slingCorrectionForceMult: 200
   slingForceMult: 100
-  defaultLinearDamping: 2
+  defaultLinearDamping: 4.25
   slingLinearDamping: 1
-  maxSlingCooldownTimer: 0.8
+  maxSlingCooldownTimer: 1
   maxSlingInvincibilityTimer: 0.25
   slingCooldown: 0
   slingForceBuildupMult: 2

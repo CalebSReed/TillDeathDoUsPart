@@ -6,6 +6,7 @@ public class AnimationEventHandler : MonoBehaviour
     [SerializeField] DirectionResolver directionResolver;
     [SerializeField] HealthManager hp;
     [SerializeField] IntroManager intro;
+    [SerializeField] GameObject stepVFX;
     public void StartInvincibility(AnimationEvent animEvent)
     {
         hp.isInvincible = true;
@@ -96,11 +97,17 @@ public class AnimationEventHandler : MonoBehaviour
     public void PlayerStep()
     {
         AudioManager.Instance.Play("Step", transform.position, gameObject, true, false, false);
+        Instantiate(stepVFX, Player.Instance.transform.position, Quaternion.identity);
     }
 
     public void EnemyStep()
     {
         AudioManager.Instance.Play("EnemyStep", transform.position, gameObject);
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     private void FixedUpdate()

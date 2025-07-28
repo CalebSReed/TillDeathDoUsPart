@@ -677,6 +677,7 @@ MonoBehaviour:
   directionResolver: {fileID: 0}
   hp: {fileID: 0}
   intro: {fileID: 234260470}
+  stepVFX: {fileID: 0}
 --- !u!1001 &203965113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22812,6 +22813,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2832373791649360252, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5959277939706654672, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -22876,6 +22881,10 @@ PrefabInstance:
       propertyPath: intro
       value: 
       objectReference: {fileID: 234260470}
+    - target: {fileID: 7699983282148911150, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
+      propertyPath: stepVFX
+      value: 
+      objectReference: {fileID: 8311089806360806983, guid: b8ba0ddd2e7b0b849966d70d59bafc91, type: 3}
     - target: {fileID: 8587556614210849384, guid: 2fb8b301791946d4595f7c10e383f2e8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -24525,7 +24534,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290892528155424757, guid: 233d92798cf23a24a92b327d19cb4da0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 296.54
+      value: 303.75
       objectReference: {fileID: 0}
     - target: {fileID: 290892528155424757, guid: 233d92798cf23a24a92b327d19cb4da0, type: 3}
       propertyPath: m_LocalPosition.y
