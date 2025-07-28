@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public bool controlsEnabled;
     public bool cutscene;
     public bool tugging;
+    public bool throwing;
     public bool intro;
 
     [SerializeField] DirectionResolver directionResolver;
@@ -112,7 +113,7 @@ public class Player : MonoBehaviour
 
     private void RotateBody()
     {
-        if (tugging)
+        if (tugging || throwing)
         {
             var pos = Death.Instance.transform.position - transform.position;
             var angle = Vector3.SignedAngle(pos.normalized, Vector3.up, Vector3.forward);

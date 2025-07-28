@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionResolver: {fileID: 6644380697329960873}
   hp: {fileID: 8460960689285506460}
+  intro: {fileID: 0}
 --- !u!1 &2925734264639744101
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
   left: {fileID: 4962120532483641226}
   right: {fileID: 4579357746263351473}
   showSpecial: 0
+  upSwing: 0
 --- !u!1 &3009345092380849749
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionResolver: {fileID: 0}
   hp: {fileID: 0}
+  intro: {fileID: 0}
 --- !u!1 &5959277939706654672
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,9 +696,12 @@ MonoBehaviour:
   hpText: {fileID: 0}
   specialAnimator: {fileID: 9080389104086611824}
   bodyRotator: {fileID: 5780912632572372535}
+  spriteHolder: {fileID: 6848848906051982840}
   controlsEnabled: 1
   cutscene: 0
   tugging: 0
+  throwing: 0
+  intro: 0
   directionResolver: {fileID: 6644380697329960873}
   frontAnimator: {fileID: 172497154026556407}
   backAnimator: {fileID: 4144155135245232798}
@@ -703,6 +709,7 @@ MonoBehaviour:
   rightAnimator: {fileID: 5992304217419870803}
   keyUI: {fileID: 0}
   hasKey: 0
+  maxInvincibilityTimer: 1
 --- !u!50 &8395688115349640318
 Rigidbody2D:
   serializedVersion: 5
@@ -764,7 +771,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -791,6 +798,8 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   isInvincible: 0
+  invincibilityOnTimer: 0
+  slingInvinicibility: 0
   rb: {fileID: 8395688115349640318}
   cooldown: 0
 --- !u!1 &8615582426114777780

@@ -306,6 +306,7 @@ MonoBehaviour:
   left: {fileID: 1770662970484208862}
   right: {fileID: 5789122507397513103}
   showSpecial: 1
+  upSwing: 0
 --- !u!1 &2554364369439966456
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionResolver: {fileID: 3237151638417569476}
   hp: {fileID: 0}
+  intro: {fileID: 0}
 --- !u!1 &3046930544130989999
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionResolver: {fileID: 0}
   hp: {fileID: 0}
+  intro: {fileID: 0}
 --- !u!1 &8676044320788575631
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +856,9 @@ MonoBehaviour:
   defaultLinearDamping: 2
   slingLinearDamping: 1
   maxSlingCooldownTimer: 0.8
+  maxSlingInvincibilityTimer: 0.25
   slingCooldown: 0
+  slingForceBuildupMult: 2
 --- !u!61 &8728460853387383808
 BoxCollider2D:
   m_ObjectHideFlags: 0

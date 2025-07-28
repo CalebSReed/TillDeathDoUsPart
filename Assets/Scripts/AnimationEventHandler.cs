@@ -38,10 +38,7 @@ public class AnimationEventHandler : MonoBehaviour
 
     public void EndThrow(AnimationEvent animEvent)
     {
-        Player.Instance.frontAnimator.SetBool("Throwing", false);
-        Player.Instance.frontAnimator.SetBool("Throwing", false);
-        Player.Instance.frontAnimator.SetBool("Throwing", false);
-        Player.Instance.frontAnimator.SetBool("Throwing", false);
+        Player.Instance.throwing = false;
     }
 
     public void StopMoving(AnimationEvent animEvent)

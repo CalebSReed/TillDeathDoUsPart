@@ -26,6 +26,7 @@ public class Link : MonoBehaviour
     public bool slinging { get; private set; }
     public bool slingCooldown;
     float slingForce;
+    [SerializeField] float slingForceBuildupMult;
     float maxSlingForce = 1f;
     bool rightSided;
     private float distance;
@@ -96,10 +97,17 @@ public class Link : MonoBehaviour
         slingCooldownTimer = maxSlingCooldownTimer;
         Camera_Behavior.Instance.FollowDeath = true;
         Player.Instance.tugging = false;
+        Player.Instance.throwing = true;
         Player.Instance.frontAnimator.SetBool("isTugging", false);
         Player.Instance.backAnimator.SetBool("isTugging", false);
         Player.Instance.leftAnimator.SetBool("isTugging", false);
         Player.Instance.rightAnimator.SetBool("isTugging", false);
+
+        Player.Instance.frontAnimator.Play("Front_Throw");
+        Player.Instance.backAnimator.Play("Back_Throw");
+        Player.Instance.leftAnimator.Play("Left_Throw");
+        Player.Instance.rightAnimator.Play("Right_Throw");
+        Death.Instance.directionResolver.showSpecial = false;
     }
 
     private void Sling()
@@ -121,11 +129,7 @@ public class Link : MonoBehaviour
         rb.linearVelocity = force;
 
         Player.Instance.hp.slingInvinicibility = true;
-        Player.Instance.frontAnimator.SetBool("Throwing", true);
-        Player.Instance.backAnimator.SetBool("Throwing", true);
-        Player.Instance.leftAnimator.SetBool("Throwing", true);
-        Player.Instance.rightAnimator.SetBool("Throwing", true);
-        Death.Instance.directionResolver.showSpecial = false;
+
     }
 
     private void Update()
@@ -216,7 +220,7 @@ public class Link : MonoBehaviour
     {
         if (slinging && slingForce < maxSlingForce)
         {
-            slingForce += Time.deltaTime * 2;
+            slingForce += Time.deltaTime * slingForceBuildupMult;
             if (slingForce > maxSlingForce)
             {
                 slingForce = maxSlingForce;

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bffc027e77784904494c78146abbb4d3
+guid: b4a1d2b086943b84fa9ccf72a67bfda9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7051062868876962984
-    second: Door_side_0
+      213: -4144357790498614568
+    second: NewWall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door_side_0
+      name: NewWall_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 0
-        width: 23
+        width: 64
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85354abcda7952e90800000000000000
-      internalID: -7051062868876962984
+      spriteID: 8d2153b1c884c76c0800000000000000
+      internalID: -4144357790498614568
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f58ec4abb61cd09419e028f53bcebdfe
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Door_side_0: -7051062868876962984
+      NewWall_0: -4144357790498614568
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
