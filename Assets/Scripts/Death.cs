@@ -40,20 +40,35 @@ public class Death : MonoBehaviour
         bodyRotator.eulerAngles = new Vector3(0, 0, Vector3.SignedAngle(rb.linearVelocity, Vector3.up, Vector3.forward));
     }
 
-    private void StartKnockback(Vector3 dir)
+    private void StartKnockback(Vector3 dir, bool normalized = true)
     {
-        rb.linearVelocity = dir.normalized * knockbackPower;
+        if (normalized)
+        {
+            rb.linearVelocity = dir.normalized * knockbackPower;
+        }
+        else
+        {
+            rb.linearVelocity = dir * knockbackPower;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         DamageArgs e = new DamageArgs();
         e.sender = transform;
-        var hp = collision.GetComponent<HealthManager>();
+        var hp = collision.transform.GetComponent<HealthManager>();
 
         if (collision.CompareTag("Enemy"))
         {
-            StartKnockback(player.transform.position - transform.position);
+            var knockBack = player.transform.position - transform.position;
+            if (!link.slinging)
+            {
+                StartKnockback(knockBack.normalized * 2, false);
+            }
+            else
+            {
+                StartKnockback(knockBack);
+            }
             link.EndSling(false);
             if (Link.Instance.slingCooldown)
             {
