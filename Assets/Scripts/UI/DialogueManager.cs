@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance { get; private set; }
+
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] List<string> dialogueList = new();
     [SerializeField] bool intro;
@@ -16,9 +18,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Sprite death;
     int index;
 
-    private void Start()
+    private void Awake()
     {
-
+        Instance = this;
     }
 
     public void AdvanceText()
@@ -72,5 +74,11 @@ public class DialogueManager : MonoBehaviour
         }
         text.text = dialogueList[index];
         index++;
+    }
+
+    public void ForceSkipDialogue()
+    {
+        textBox.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

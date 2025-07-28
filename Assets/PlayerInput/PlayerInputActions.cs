@@ -189,6 +189,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkipCutscene"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d88c4db-bd09-483e-8f78-9d438bbdb2e4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -378,6 +387,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1906e7f7-15a2-474d-9120-c6e9e3a86c6a"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""SkipCutscene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -414,6 +434,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_PlayerDefault_Return = m_PlayerDefault.FindAction("Return", throwIfNotFound: true);
         m_PlayerDefault_ToggleFollow = m_PlayerDefault.FindAction("ToggleFollow", throwIfNotFound: true);
         m_PlayerDefault_Select = m_PlayerDefault.FindAction("Select", throwIfNotFound: true);
+        m_PlayerDefault_SkipCutscene = m_PlayerDefault.FindAction("SkipCutscene", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -505,6 +526,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerDefault_Return;
     private readonly InputAction m_PlayerDefault_ToggleFollow;
     private readonly InputAction m_PlayerDefault_Select;
+    private readonly InputAction m_PlayerDefault_SkipCutscene;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerDefault".
     /// </summary>
@@ -560,6 +582,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerDefault/Select".
         /// </summary>
         public InputAction @Select => m_Wrapper.m_PlayerDefault_Select;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerDefault/SkipCutscene".
+        /// </summary>
+        public InputAction @SkipCutscene => m_Wrapper.m_PlayerDefault_SkipCutscene;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -619,6 +645,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Select.started += instance.OnSelect;
             @Select.performed += instance.OnSelect;
             @Select.canceled += instance.OnSelect;
+            @SkipCutscene.started += instance.OnSkipCutscene;
+            @SkipCutscene.performed += instance.OnSkipCutscene;
+            @SkipCutscene.canceled += instance.OnSkipCutscene;
         }
 
         /// <summary>
@@ -663,6 +692,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Select.started -= instance.OnSelect;
             @Select.performed -= instance.OnSelect;
             @Select.canceled -= instance.OnSelect;
+            @SkipCutscene.started -= instance.OnSkipCutscene;
+            @SkipCutscene.performed -= instance.OnSkipCutscene;
+            @SkipCutscene.canceled -= instance.OnSkipCutscene;
         }
 
         /// <summary>
@@ -793,5 +825,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSelect(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SkipCutscene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSkipCutscene(InputAction.CallbackContext context);
     }
 }

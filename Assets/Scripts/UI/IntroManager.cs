@@ -20,6 +20,32 @@ public class IntroManager : MonoBehaviour
     public bool lvl1;
 
     int index;
+
+    public void SkipIntro(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (!gameObject.activeSelf)
+            {
+                return;
+            }
+
+            if (!lvl1)
+            {
+                SceneManager.LoadScene("Lvl1");
+            }
+            else
+            {
+                UntieRope();
+                deathCutscene.SetActive(false);
+                ropeIntro.SetActive(false);
+                dialogue.ForceSkipDialogue();
+                player.frontAnimator.Rebind();
+                EndIntro();
+            }
+        }
+    }
+
     public void AdvanceIntro(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -113,22 +139,5 @@ public class IntroManager : MonoBehaviour
         player.intro = false;
         advance.SetActive(false);
         gameObject.SetActive(false);
-    }
-
-    public void SkipIntro()
-    {
-        if (!lvl1)
-        {
-            SceneManager.LoadScene("Lvl1");
-        }
-        else
-        {
-            if (dialogue != null)
-            {
-                Destroy(dialogue.textBox.gameObject);
-                Destroy(dialogue.gameObject);
-            }
-            EndIntro();
-        }
     }
 }

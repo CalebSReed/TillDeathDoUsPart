@@ -17073,7 +17073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1037567560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22963,7 +22963,7 @@ MonoBehaviour:
   - Well too bad, because you're going to be stuck here for a very long time.
   - Nuh uh! I'm going to go find the exit!
   - WHAT DO YOU THINK YOUR'RE DOING??
-  - WHAT DO YOU THINK YOUR'RE DOING??
+  - WHAT DO YOU THINK YOU'RE DOING??
   - You're coming with me Death, I'll need your help to escape!
   - UNTIE ME NOW!!!
   - Let's GOOOOOO!!!
@@ -23856,6 +23856,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
+      value: 5d88c4db-bd09-483e-8f78-9d438bbdb2e4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
+      value: 'PlayerDefault/SkipCutscene[/Keyboard/escape]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
       propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1813230377}
@@ -23863,6 +23883,14 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 234260470}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 234260470}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
       propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnSlingInput
@@ -23872,8 +23900,20 @@ PrefabInstance:
       value: AdvanceIntro
       objectReference: {fileID: 0}
     - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SkipIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
       propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: IntroManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IntroManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257903776044779591, guid: 4082d7922ce716d4294980216186f09d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1645597508197624550, guid: 4082d7922ce716d4294980216186f09d, type: 3}
       propertyPath: lvl1
@@ -24610,7 +24650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3317722584506530844, guid: b6ade42491f741d408f4b1ed542b7c94, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -491
+      value: -484
       objectReference: {fileID: 0}
     - target: {fileID: 3317722584506530844, guid: b6ade42491f741d408f4b1ed542b7c94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24623,6 +24663,12 @@ PrefabInstance:
     - target: {fileID: 3317722584506530844, guid: b6ade42491f741d408f4b1ed542b7c94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589990088072160255, guid: b6ade42491f741d408f4b1ed542b7c94, type: 3}
+      propertyPath: m_text
+      value: 'SPACE / ENTER -> Advance Cutscene
+
+        ESC: Skip Cutscene'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
