@@ -19,10 +19,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] Animator rope;
     [SerializeField] string lvlName;
     [SerializeField] bool endGame;
+    [SerializeField] GameObject pauseMenu;
     public bool lvl2;
     public bool intro;
     public bool lvl1;
     public bool titleScreen;
+    bool paused;
 
     private void Awake()
     {
@@ -42,6 +44,24 @@ public class GameManager : MonoBehaviour
         if (intro || lvl1)
         {
             AudioManager.Instance.Play("Intro", transform.position, gameObject, true, false, true);
+        }
+    }
+
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            paused = !paused;
+
+            if (paused)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            pauseMenu.SetActive(paused);
         }
     }
 
