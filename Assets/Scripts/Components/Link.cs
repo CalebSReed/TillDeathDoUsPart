@@ -53,7 +53,7 @@ public class Link : MonoBehaviour
         {
             StartSling();
         }
-        else if (context.canceled && slinging)
+        else if (context.canceled && slinging && Player.Instance.controlsEnabled)
         {
             EndSling();
         }
@@ -140,6 +140,11 @@ public class Link : MonoBehaviour
         if (!Player.Instance.intro && Player.Instance.playerInput.PlayerDefault.Sling.ReadValue<float>() > 0f && !slinging && !slingCooldown && Player.Instance.controlsEnabled && !Player.Instance.cutscene)
         {
             StartSling();
+        }
+
+        if (slinging && Player.Instance.playerInput.PlayerDefault.Sling.ReadValue<float>() == 0 && Player.Instance.controlsEnabled)
+        {
+            EndSling();
         }
 
         RunSlingCooldownTimer();

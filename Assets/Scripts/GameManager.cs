@@ -49,9 +49,10 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !Player.Instance.intro)
         {
             paused = !paused;
+            Player.Instance.controlsEnabled = !paused;
 
             if (paused)
             {
