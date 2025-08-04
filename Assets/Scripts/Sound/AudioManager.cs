@@ -19,6 +19,12 @@ public class AudioManager : MonoBehaviour//we need multiple instances of this. s
         Instance = this;
     }
 
+    private void Start()
+    {
+        SoundOptions.Instance.OnMusicChanged += ChangeMusicVolume;
+        SoundOptions.Instance.OnSoundFXChanged += ChangeSFXVolume;
+    }
+
     public AudioSource Play(string name, Vector3 position, GameObject objSource = null, bool overrideTwoDimensional = false, bool followSource = false, bool forcePitch = false)//add an overload to search by mobname btw
     {
         var audioSource = soundPool.SpawnObject().GetComponent<AudioSource>();
@@ -34,28 +40,28 @@ public class AudioManager : MonoBehaviour//we need multiple instances of this. s
             Debug.LogError($"Bro this the wrong got damn sound: {name}");
         }
 
-        audioSource.clip = s.clip;
-        audioSource.loop = s.loop;
-        audioSource.dopplerLevel = 0;
-
         switch (s.soundType)
         {
             case Sound.SoundType.SoundEffect:
-                audioSource.volume = s.volumeMult;                
+                audioSource.volume = SoundOptions.Instance.SoundFXVolume * s.volumeMult;
                 audioSource.pitch = Random.Range(.75f, 1.25f);
                 s.soundMode = Sound.SoundMode.ThreeDimensional;
                 break;
             case Sound.SoundType.Ambience:
-                audioSource.volume = s.volumeMult;
+                audioSource.volume = SoundOptions.Instance.AmbienceVolume * s.volumeMult;
                 audioSource.pitch = Random.Range(.75f, 1.25f);
                 s.soundMode = Sound.SoundMode.TwoDimensional;
                 break;
             case Sound.SoundType.Music:
-                audioSource.volume = s.volumeMult;
+                audioSource.volume = SoundOptions.Instance.MusicVolume * s.volumeMult;
                 s.soundMode = Sound.SoundMode.TwoDimensional;
                 audioSource.pitch = 1;
                 break;
         }
+
+        audioSource.clip = s.clip;
+        audioSource.loop = s.loop;
+        audioSource.dopplerLevel = 0;
         
         if (s.soundMode == Sound.SoundMode.TwoDimensional || overrideTwoDimensional)
         {
@@ -173,26 +179,50 @@ public class AudioManager : MonoBehaviour//we need multiple instances of this. s
         //s.source.Stop();
     }
 
-    public void ChangeMusicVolume(string name)
+    public void ChangeMusicVolume(object sender, EventArgs e)
     {
         for (int i = 0; i < poolParent.childCount; i++)
         {
-            SoundPrefab spf = poolParent.GetChild(i).GetComponent<SoundPrefab>();//in the future for optimizations, initialize a list of the references and cache it. add extras if poolSize changes
-            if (poolParent.GetChild(i).GetComponent<SoundPrefab>().soundName == name)
+            var child = poolParent.GetChild(i).gameObject;
+            
+            if (child.activeSelf)
             {
-                spf.gameObject.GetComponent<AudioSource>().volume = spf.volMult;
+                var soundPrefab = child.GetComponent<SoundPrefab>();
+
+                if (soundPrefab.soundType == Sound.SoundType.Music)
+                {
+                    soundPrefab.GetComponent<AudioSource>().volume = soundPrefab.volMult * SoundOptions.Instance.MusicVolume;
+                }
             }
         }
-    } 
+    }
+
+    public void ChangeSFXVolume(object sender, EventArgs e)
+    {
+        for (int i = 0; i < poolParent.childCount; i++)
+        {
+            var child = poolParent.GetChild(i).gameObject;
+
+            if (child.activeSelf)
+            {
+                var soundPrefab = child.GetComponent<SoundPrefab>();
+
+                if (soundPrefab.soundType == Sound.SoundType.SoundEffect)
+                {
+                    soundPrefab.GetComponent<AudioSource>().volume = soundPrefab.volMult * SoundOptions.Instance.SoundFXVolume;
+                }
+            }
+        }
+    }
 
     public void ChangeAmbienceVolume(string name)
     {
         for (int i = 0; i < poolParent.childCount; i++)
         {
-            SoundPrefab spf = poolParent.GetChild(i).GetComponent<SoundPrefab>();//in the future for optimizations, initialize a list of the references and cache it. add extras if poolSize changes
+            SoundPrefab spf = poolParent.GetChild(i).GetComponent<SoundPrefab>();
             if (poolParent.GetChild(i).GetComponent<SoundPrefab>().soundName == name)
             {
-                spf.gameObject.GetComponent<AudioSource>().volume = spf.volMult;
+                spf.gameObject.GetComponent<AudioSource>().volume = spf.volMult * SoundOptions.Instance.AmbienceVolume;
             }
         }
     }

@@ -112,16 +112,16 @@ MonoBehaviour:
     loop: 0
   - name: Level
     clip: {fileID: 8300000, guid: f7c2c629203ce6f448b94598c9ecba92, type: 3}
-    soundType: 0
+    soundType: 1
     volumeMult: 0.5
     loop: 1
   - name: Intro
     clip: {fileID: 8300000, guid: dd1307c61171c5c449374f840838c4a0, type: 3}
-    soundType: 0
+    soundType: 1
     volumeMult: 1
     loop: 1
   - name: Title
     clip: {fileID: 8300000, guid: 09b0d18fd161c374991bac7fcf634164, type: 3}
-    soundType: 0
+    soundType: 1
     volumeMult: 1
     loop: 1
