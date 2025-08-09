@@ -222,6 +222,14 @@ public class Link : MonoBehaviour
         }
     }
 
+    public void ForceEndSlingCooldown()
+    {
+        slingCooldownTimer = 0f;
+        slingCooldown = false;
+        Camera_Behavior.Instance.FollowDeath = false;
+        Death.Instance.directionResolver.showSpecial = true;
+    }
+
     private void BuildUpSlingForce()
     {
         if (slinging && slingForce < maxSlingForce)

@@ -30,6 +30,7 @@ public class DoorBehavior : MonoBehaviour
                 timer = 0f;
                 cooldown = false;
                 Player.Instance.cutscene = false;
+                Link.Instance.ForceEndSlingCooldown();
                 physicalCollider.SetActive(true);
             }
         }
